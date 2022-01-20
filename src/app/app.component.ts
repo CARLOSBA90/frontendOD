@@ -11,6 +11,12 @@ import { ViewEncapsulation } from '@angular/core';
 })
 export class AppComponent {
 
+  carousel = false;
+
+  showNews(tipo:number){
+      alert(tipo);
+  }
+
 
 
 }

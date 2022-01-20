@@ -1,6 +1,6 @@
-<app-navbar></app-navbar>
+<app-navbar (news)="showNews($event)"></app-navbar>
 <main role="main">
-<app-carousel></app-carousel>
+<app-carousel *ngIf="carousel"></app-carousel>
 <app-news></app-news>
 <app-footer></app-footer>
 </main>

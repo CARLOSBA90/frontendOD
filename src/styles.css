@@ -1,78 +1,15 @@
-.marketing .col-lg-4 {
-  margin-bottom: 1.2rem;
-  text-align: center;
-}
-.marketing h2 {
-  font-weight: 300;
-}
-.marketing .col-lg-4 p {
-  margin-right: .75rem;
-  margin-left: .75rem;
-}
-
-/* Featurettes
-------------------------- */
-
-.featurette-divider {
-  margin: 1.5rem 0; /* Space out the Bootstrap <hr> more */
-}
-
-/* Thin out the marketing headings */
-.featurette-heading {
-  font-weight: 100;
-  line-height: 1;
-  letter-spacing: -.05rem;
-}
-
-
-/* RESPONSIVE CSS
--------------------------------------------------- */
-
-@media (min-width: 40em) {
-  /* Bump up size of carousel content */
-
-  .featurette-heading {
-    font-size: 35px;
-  }
-}
-
-@media (min-width: 62em) {
-  .featurette-heading {
-    margin-top: 5rem;
-  }
-}
-
-body{
-  font-family:  sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS' !important;
-  color: #414c47 !important;
-}
-
-
-.carousel-inner .sr-only {
-  display: none;
-}
-
-.picsum-img-wrapper img{
-  height: 60vh;
-  width: 100%;
-}
-
 main {
-  padding-top: 13px;
+  padding-top: 7px;
 }
-
-
 /* Background color nav bar*/
 
 .estiloNavbar{
   background-color: #daffef;
   font-size: 1.2rem;
-
 }
 
 .estiloNavbar a{
   color: #57665f;
-
 }
 
 li a:hover, .navbar-brand:hover{
@@ -111,39 +48,24 @@ li a::before{
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
- .pagination .page-item .page-link {
-}
 
 .pagination .page-link {
- /* border-top-style: none !important; */
-/*  border-bottom-style: none !important; */
   background-color:  #eefff8 !important;
   color: #57665f !important;
 }
 
-.pagination > .active > a
-{
-    color: black;
+.pagination > .active > a {
+     color: black;
     background-color: #9cffd5 !important;
     border: solid 1px #9cffd5 !important;
 }
-
-
-
-
-
-
-
-
-
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
 body {
   padding-top: 3rem;
-  padding-bottom: 3rem;
-  color: #5a5a5a;
+  color: #daffef;
 }
 
 
@@ -152,7 +74,7 @@ body {
 
 /* Carousel base class */
 .carousel {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -163,14 +85,14 @@ body {
 /* Declare heights because of positioning of img element */
 .carousel-item {
   height: 25rem;
-  background-color: #777;
+  background-color: #9cffd5;
 }
 .carousel-item > img {
   position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
-  height: 32rem;
+  height: 25rem;
 }
 
 
@@ -195,12 +117,12 @@ body {
 ------------------------- */
 
 .featurette-divider {
-  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+  margin: 1.5rem 0; /* Space out the Bootstrap <hr> more */
 }
 
 /* Thin out the marketing headings */
 .featurette-heading {
-  font-weight: 300;
+  font-weight: 100px;
   line-height: 1;
   letter-spacing: -.05rem;
 }
@@ -218,12 +140,14 @@ body {
   }
 
   .featurette-heading {
-    font-size: 50px;
+    font-size: 40px;
   }
 }
 
 @media (min-width: 62em) {
   .featurette-heading {
-    margin-top: 7rem;
+    margin-top: 3rem;
   }
 }
+
+li { cursor: pointer; }
