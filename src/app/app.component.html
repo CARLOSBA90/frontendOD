@@ -1,8 +1,9 @@
-<app-navbar (news)="showNews($event)"></app-navbar>
+<div *ngIf="rout.url!='/admin'">
+<app-navbar (news)="showNews($event)" ></app-navbar>
 <main role="main">
-<app-carousel *ngIf="carousel"></app-carousel>
+<app-carousel *ngIf="carousel" ></app-carousel>
 <app-news></app-news>
 <app-footer></app-footer>
 </main>
-
+</div>
 <router-outlet></router-outlet>

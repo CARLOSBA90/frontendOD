@@ -9,6 +9,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { FooterComponent } from './footer/footer.component';
 import { NewsComponent } from './news/news.component';
+import { PanelComponent } from './panel/panel.component';
 
 @NgModule({
   declarations: [
@@ -16,12 +17,13 @@ import { NewsComponent } from './news/news.component';
     NavbarComponent,
     CarouselComponent,
     FooterComponent,
-    NewsComponent
+    NewsComponent,
+    PanelComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

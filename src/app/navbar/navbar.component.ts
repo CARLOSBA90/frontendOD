@@ -17,4 +17,5 @@ export class NavbarComponent implements OnInit {
    this.news.emit(tipo);
   }
 
+
 }
