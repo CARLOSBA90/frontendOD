@@ -1,1 +1,30 @@
-<p>panel works!</p>
+<div class="ml-4 mr-4">
+  <h2>Panel</h2>
+<div class="d-flex">
+  <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills" orientation="vertical" [destroyOnHide]="true">
+    <li ngbNavItem="Principal">
+      <a ngbNavLink>Principal</a>
+      <ng-template ngbNavContent>
+        <p>Componente principal <br> Estadisticas <br> Lista de Colaboradores <br> Otros</p>
+      </ng-template>
+    </li>
+    <li ngbNavItem="Articulos">
+      <a ngbNavLink>Articulos</a>
+      <ng-template ngbNavContent>
+        <p>Componentes de ordenar por seccion, fecha, colaboradores o activos todos los articulos</p>
+      </ng-template>
+    </li>
+    <li ngbNavItem="Publicar">
+      <a ngbNavLink>Publicar</a>
+      <ng-template ngbNavContent>
+        <p>Componente para crear un nuevo articulo</p>
+      </ng-template>
+    </li>
+    <li ngbNavItem="Salir">
+      <a ngbNavLink>Salir</a>
+    </li>
+  </ul>
+
+  <div [ngbNavOutlet]="nav" class="ml-4"></div>
+</div>
+</div>

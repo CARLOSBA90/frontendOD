@@ -25,7 +25,7 @@ li a:hover, .navbar-brand:hover{
 }
 
 
-li a::before{
+nav div li a::before{
   content: '';
   position: absolute;
   bottom: 0;
@@ -37,7 +37,7 @@ li a::before{
 }
 
 @media (hover: hover) and (pointer: fine) {
-  li a:hover::before{
+  nav div li a:hover::before{
     left: 0;
     right: auto;
     width: 100%;

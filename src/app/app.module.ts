@@ -10,6 +10,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { FooterComponent } from './footer/footer.component';
 import { NewsComponent } from './news/news.component';
 import { PanelComponent } from './panel/panel.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PanelComponent } from './panel/panel.component';
     CarouselComponent,
     FooterComponent,
     NewsComponent,
-    PanelComponent
+    PanelComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

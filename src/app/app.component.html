@@ -1,4 +1,4 @@
-<div *ngIf="rout.url!='/admin'">
+<div *ngIf="rout.url!='/admin'&&rout.url!='/panel'">
 <app-navbar (news)="showNews($event)" ></app-navbar>
 <main role="main">
 <app-carousel *ngIf="carousel" ></app-carousel>
