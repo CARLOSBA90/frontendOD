@@ -11,6 +11,10 @@ import { FooterComponent } from './footer/footer.component';
 import { NewsComponent } from './news/news.component';
 import { PanelComponent } from './panel/panel.component';
 import { LoginComponent } from './login/login.component';
+import { PrincipalComponent } from './panelComponents/principal/principal.component';
+import { ArticulosComponent } from './panelComponents/articulos/articulos.component';
+import { NuevoComponent } from './panelComponents/nuevo/nuevo.component';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 @NgModule({
   declarations: [
@@ -20,12 +24,16 @@ import { LoginComponent } from './login/login.component';
     FooterComponent,
     NewsComponent,
     PanelComponent,
-    LoginComponent
+    LoginComponent,
+    PrincipalComponent,
+    ArticulosComponent,
+    NuevoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    CKEditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
