@@ -1,1 +1,74 @@
-<ckeditor [editor]="Editor" data="<p>Hello, world!</p>"></ckeditor>
+<form>
+  <div class="row d-flex justify-content-center align-items-center p-2">
+    <div class="col">
+      <div class="card shadow-2-strong" style="border-radius: 1rem;">
+        <div class="card-body p-2 m-2">
+
+          <h3 class="mb-4">Nuevo Articulo</h3>
+
+          <div class="form-group row">
+            <label for="titulo" class="col-sm-2 col-form-label">Titulo</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control-plaintext" id="titulo" placeHolder="Nuevo contenido">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="seccion" class="col-sm-2 col-form-label">Sección</label>
+            <div class="col-sm-10">
+              <select class="custom-select" id="seccion">
+                <option selected value="1">Tortas</option>
+                <option value="2">Galletas</option>
+                <option value="3">Otros</option>
+                <option value="4">Historias</option>
+                <option value="5">Tips</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-12">
+            <ckeditor #myEditor [editor]="Editor" [data]="data" [(ngModel)]="data" [ngModelOptions]="{standalone: true}"></ckeditor>
+          </div>
+        </div>
+
+          <div class="form-group row">
+            <label for="imagen1" class="col-sm-2 col-form-label">Link imagen</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control-plaintext" id="imagen1" placeholder="link">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="imagen2" class="col-sm-2 col-form-label">Link imagen 2</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control-plaintext" id="imagen2" placeholder="link 2">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="autor" class="col-sm-2 col-form-label">Mostrar Autor</label>
+            <div class="col-sm-10">
+              <select class="custom-select" id="autor">
+                <option selected value="1">Si</option>
+                <option value="2">No</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="activo" class="col-sm-2 col-form-label">Estado del Articulo</label>
+            <div class="col-sm-10">
+              <select class="custom-select" id="activo">
+                <option selected value="1">Activo</option>
+                <option value="2">Inactivo</option>
+              </select>
+            </div>
+          </div>
+
+
+          <button (click)="enviar()" class="btn btn-primary">Enviar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

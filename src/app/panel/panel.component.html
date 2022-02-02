@@ -1,25 +1,22 @@
 <div class="ml-4 mr-4">
   <h2>Panel</h2>
-<div class="d-flex">
-  <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills" orientation="vertical" [destroyOnHide]="true">
+<div class="flex" id="panel">
+  <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills" orientation="horizontal" [destroyOnHide]="true">
     <li ngbNavItem="Principal">
       <a ngbNavLink>Principal</a>
       <ng-template ngbNavContent>
-        <p>Componente principal <br> Estadisticas <br> Lista de Colaboradores <br> Otros</p>
         <app-principal></app-principal>
       </ng-template>
     </li>
     <li ngbNavItem="Articulos">
       <a ngbNavLink>Articulos</a>
       <ng-template ngbNavContent>
-        <p>Componentes de ordenar por seccion, fecha, colaboradores o activos todos los articulos</p>
         <app-articulos></app-articulos>
       </ng-template>
     </li>
     <li ngbNavItem="Publicar">
       <a ngbNavLink>Publicar</a>
       <ng-template ngbNavContent>
-        <p>Componente para crear un nuevo articulo</p>
         <app-nuevo></app-nuevo>
       </ng-template>
     </li>
