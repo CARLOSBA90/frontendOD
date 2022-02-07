@@ -1,22 +1,22 @@
-<form>
+<form [formGroup]="formContent" (submit)="send()">
   <div class="row d-flex justify-content-center align-items-center p-2">
     <div class="col">
       <div class="card shadow-2-strong" style="border-radius: 1rem;">
         <div class="card-body p-2 m-2">
 
-          <h3 class="mb-4">Nuevo Articulo</h3>
+          <h3 class="mb-4">Nuevo Articulo {{formContent.valid | json}}</h3>
 
           <div class="form-group row">
             <label for="titulo" class="col-sm-2 col-form-label">Titulo</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control-plaintext" id="titulo" placeHolder="Nuevo contenido">
+              <input type="text" class="form-control-plaintext" id="titulo" placeHolder="Nuevo contenido" formControlName="titulo">
             </div>
           </div>
 
           <div class="form-group row">
             <label for="seccion" class="col-sm-2 col-form-label">Sección</label>
             <div class="col-sm-10">
-              <select class="custom-select" id="seccion">
+              <select class="custom-select" id="seccion" formControlName="seccion">
                 <option selected value="1">Tortas</option>
                 <option value="2">Galletas</option>
                 <option value="3">Otros</option>
@@ -27,28 +27,28 @@
           </div>
           <div class="form-group row">
             <div class="col-sm-12">
-            <ckeditor #myEditor [editor]="Editor" [data]="data" [(ngModel)]="data" [ngModelOptions]="{standalone: true}"></ckeditor>
+            <ckeditor #myEditor [editor]="Editor" [data]="data" formControlName="data"></ckeditor>
           </div>
         </div>
 
           <div class="form-group row">
             <label for="imagen1" class="col-sm-2 col-form-label">Link imagen</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control-plaintext" id="imagen1" placeholder="link">
+              <input type="text" class="form-control-plaintext" id="imagen1" placeholder="link" formControlName="imagen1">
             </div>
           </div>
 
           <div class="form-group row">
             <label for="imagen2" class="col-sm-2 col-form-label">Link imagen 2</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control-plaintext" id="imagen2" placeholder="link 2">
+              <input type="text" class="form-control-plaintext" id="imagen2" placeholder="link 2" formControlName="imagen2">
             </div>
           </div>
 
           <div class="form-group row">
             <label for="autor" class="col-sm-2 col-form-label">Mostrar Autor</label>
             <div class="col-sm-10">
-              <select class="custom-select" id="autor">
+              <select class="custom-select" id="autor" formControlName="autor">
                 <option selected value="1">Si</option>
                 <option value="2">No</option>
               </select>
@@ -58,7 +58,7 @@
           <div class="form-group row">
             <label for="activo" class="col-sm-2 col-form-label">Estado del Articulo</label>
             <div class="col-sm-10">
-              <select class="custom-select" id="activo">
+              <select class="custom-select" id="activo" formControlName="activo">
                 <option selected value="1">Activo</option>
                 <option value="2">Inactivo</option>
               </select>
@@ -66,7 +66,7 @@
           </div>
 
 
-          <button (click)="enviar()" class="btn btn-primary">Enviar</button>
+          <button class="btn btn-primary">Enviar</button>
         </div>
       </div>
     </div>

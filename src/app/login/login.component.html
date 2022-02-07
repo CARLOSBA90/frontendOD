@@ -6,14 +6,14 @@
           <div class="card-body p-5 text-center">
 
             <h3 class="mb-5">Panel Web</h3>
-
+            <form [formGroup]="formLogin" (submit)="send()">
             <div class="form-outline mb-4">
-              <input type="text" id="user" class="form-control form-control-lg" />
+              <input type="text" id="user" class="form-control form-control-lg" formControlName="user"/>
               <label class="form-label" for="user">Usuario</label>
             </div>
 
             <div class="form-outline mb-4">
-              <input type="password" id="contra" class="form-control form-control-lg" />
+              <input type="password" id="contra" class="form-control form-control-lg" formControlName="contra"/>
               <label class="form-label" for="contra">Contraseña</label>
             </div>
 
@@ -28,11 +28,13 @@
               <label class="form-check-label" for="form1Example3">Recordar</label>
             </div>
 
-            <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
-
+            <button [disabled]="formLogin.invalid" class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+           </form>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+
